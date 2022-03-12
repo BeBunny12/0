@@ -17,10 +17,12 @@
     <script>
 
       var img = new Array("0.png", "1.png");
+      var audio = new Audio("clicksound.mp3");
 
       var i;
-      i = 0;
+      i = 1;
       function change() {
+        audio.play();
         if (i == 1) document.zero.src = img[i--];
         else document.zero.src = img[i++];
       }
@@ -29,6 +31,7 @@
   <body>
     <div id="img">
       <img name="zero" src="0.png" onClick="javascript:change();">
+      <audio src="clicksound.mp3"></audio>
     </div>
   </body>
 </html>
