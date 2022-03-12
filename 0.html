@@ -2,9 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>0</title>
+    <style>
+      #img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #img img{
+        height: 800px; width: 800px;
+      }
+    </style>
+    <script>
+
+      var img = new Array("0.png", "1.png");
+
+      var i;
+      i = 0;
+      function change() {
+        if (i == 1) document.zero.src = img[i--];
+        else document.zero.src = img[i++];
+      }
+    </script>
   </head>
   <body>
-    
+    <div id="img">
+      <img name="zero" src="0.png" onClick="javascript:change();">
+    </div>
   </body>
 </html>
